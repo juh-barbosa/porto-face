@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.letter-grid {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: moveToCenter 3s forwards;
+}
+
+.letter-0 {
+  animation-name: moveFromTopLeft;
+}
+
+.letter-1 {
+  animation-name: moveFromTopRight;
+}
+
+.letter-2 {
+  animation-name: moveFromBottomLeft;
+}
+
+.letter-3 {
+  animation-name: moveFromBottomRight;
+}
+
+.letter-4 {
+  animation-name: moveFromTop;
+}
+
+.grid-row {
+  display: flex;
+}
+
+.grid-image {
+  width: 80px; /* Increase size */
+  height: 80px; /* Increase size */
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.grid-placeholder {
+  width: 80px;
+  height: 80px;
+  margin: 2px;
+  background-color: transparent;
+}
+
+@keyframes moveFromTopLeft {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveFromTopRight {
+  0% {
+    transform: translate(100%, -100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveFromBottomLeft {
+  0% {
+    transform: translate(-100%, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveFromBottomRight {
+  0% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
